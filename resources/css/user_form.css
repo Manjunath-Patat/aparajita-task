@@ -1,0 +1,81 @@
+/* resources/css/user_form.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7; /* A slightly lighter gray */
+}
+
+form {
+    background-color: #fff;
+    padding: 30px; /* Increased padding */
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    width: 450px; /* Slightly wider form */
+    max-width: 95%; /* More responsive on smaller screens */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* More space below labels */
+    font-weight: 500; /* Slightly lighter bold */
+    color: #333; /* Darker text */
+}
+
+input[type="text"],
+select,
+input[type="number"],
+button {
+    width: 100%;
+    padding: 12px; /* More padding inside inputs */
+    margin-bottom: 20px; /* More space below inputs */
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Slightly darker input border */
+    border-radius: 6px; /* More rounded input corners */
+    font-size: 16px;
+    color: #555; /* Darker input text */
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+button {
+    background-color: #28a745; /* Bootstrap success color */
+    color: white;
+    border: none;
+    padding: 12px 20px; /* Adjust button padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px; /* Slightly larger button text */
+    border-radius: 6px; /* Rounded button corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e7e34; /* Darker shade on hover */
+}
+
+.alert-success {
+    color: #155724; /* Darker green text */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda; /* Light green background */
+    border: 1px solid #c3e6cb; /* Light green border */
+    border-radius: 6px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* More space below heading */
+}
