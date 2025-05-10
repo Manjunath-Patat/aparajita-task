@@ -56,6 +56,7 @@ return [
             'model' => App\Models\User::class,
         ],
 
+
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class, // Ensure this is App\Models\Admin::class
