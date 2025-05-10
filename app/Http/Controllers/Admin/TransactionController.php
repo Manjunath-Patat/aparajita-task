@@ -28,7 +28,6 @@ class TransactionController extends Controller
         return view('admin.transactions.index', compact('transactions', 'totalExpense', 'totalIncome'));
     }
 
-
     public function edit(Transaction $transaction): View
     {
         return view('admin.transactions.edit', compact('transaction'));
