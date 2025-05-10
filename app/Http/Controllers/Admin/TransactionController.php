@@ -10,14 +10,24 @@ use Illuminate\View\View;
 
 class TransactionController extends Controller
 {
-    public function index(): View
+    public function index(Request $request)
     {
-        $transactions = Transaction::latest()->paginate(10);
+        $search = $request->input('search');
+        $query = Transaction::latest();
+
+        if ($search) {
+            $query->where('name', 'like', '%' . $search . '%')
+                ->orWhere('type', 'like', '%' . $search . '%')
+                ->orWhere('amount', 'like', '%' . $search . '%');
+        }
+
+        $transactions = $query->paginate(10)->withQueryString();
         $totalExpense = Transaction::where('type', 'expense')->sum('amount');
         $totalIncome = Transaction::where('type', 'income')->sum('amount');
 
         return view('admin.transactions.index', compact('transactions', 'totalExpense', 'totalIncome'));
     }
+
 
     public function edit(Transaction $transaction): View
     {
